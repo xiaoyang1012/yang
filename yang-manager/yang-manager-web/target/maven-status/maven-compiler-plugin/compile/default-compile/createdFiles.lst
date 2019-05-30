@@ -1,8 +1,0 @@
-com\yang\controller\PicUploadController.class
-com\yang\controller\UserController.class
-com\yang\controller\WordWallController.class
-com\yang\controller\TbContentController.class
-com\yang\controller\ItemCatController.class
-com\yang\interceptor\LoginInterceptor.class
-com\yang\controller\PageController.class
-com\yang\controller\CommentController.class
