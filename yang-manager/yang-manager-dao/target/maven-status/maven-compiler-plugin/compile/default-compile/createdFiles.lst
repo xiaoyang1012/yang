@@ -1,0 +1,5 @@
+com\yang\dao\TbContentMapper.class
+com\yang\dao\userMapper.class
+com\yang\dao\CommentMapper.class
+com\yang\dao\WordWallMapper.class
+com\yang\dao\TbItemCatMapper.class

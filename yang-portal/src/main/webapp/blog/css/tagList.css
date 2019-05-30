@@ -1,0 +1,63 @@
+#tagshome{
+	height: 200px;
+}
+.box {
+ 
+  display: block;
+  height: 30px;
+  width:120px;
+  position: relative;
+  border-radius: 8px;
+  background: linear-gradient(to right, #abbd73 35%, #d6e2ad 100%);
+  margin-bottom: 20px;
+  margin-left: 25px;
+  padding: 2px 15px 1px 10px;
+  color: darkslategray;
+  box-shadow: 1px 2px 11px -1px #777;
+  transition: background 200ms ease-in-out;
+  text-align:right;
+  float:left;
+}
+
+.box a{color:#fff;text-decoration:none;}
+
+.shadow {
+  position: relative;
+}
+.shadow:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 7px;
+  width: 25%;
+  top: 0;
+  box-shadow: 2px 15px 10px #777;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+
+.box:hover {
+  background: linear-gradient(to right, #abbd73 0%, #abbd73 100%);
+}
+
+.shadow:hover::before {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  bottom: 20px;
+  z-index: -10;
+}
+
+.circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px antiquewhite;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  text-align:right;
+  padding:0 5px 0 0;
+}

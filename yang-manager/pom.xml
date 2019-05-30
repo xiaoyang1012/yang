@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>yang-parent</artifactId>
+    <groupId>com.yang</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.yang</groupId>
+  <artifactId>yang-manager</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <!-- 依赖管理 -->
+	<dependencies>
+		<dependency>
+			<groupId>com.yang</groupId>
+			<artifactId>yang-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<modules>
+		
+		<module>yang-manager-dao</module>
+		<module>yang-manager-pojo</module>
+		<module>yang-manager-service</module>
+		<module>yang-manager-web</module>
+	</modules>
+	<!-- 添加tomcat插件 -->
+	<build>
+		<plugins>
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.4</version>
+            <configuration>
+                
+            </configuration>
+        </plugin>
+		
+		
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<port>8085</port>
+					<path>/back</path>
+					<!-- 系统热部署 -->
+					<url>http://47.99.74.206:8085/manager/text</url>
+					<username>tomcat</username>
+					<password>tomcat</password>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
